@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Default dark theme tokens */
+  --background: #080B12;
+  --foreground: #F4F7FB;
+  --surface: #0D1220;
+  --surface-elevated: #111827;
+  --muted: #162032;
+  --muted-foreground: #9AA8BC;
+  --border: #202B3B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Primary Accent: Electric Blue */
+  --primary: #60A5FA;
+  --primary-hover: #3B82F6;
+  --primary-foreground: #FFFFFF;
+  --accent: #8B5CF6;
+  --accent-foreground: #FFFFFF;
+  --ring: rgba(96, 165, 250, 0.45);
+  --subtle-accent: rgba(96, 165, 250, 0.08);
+  --gradient-start: #3B82F6;
+  --gradient-end: #8B5CF6;
+}
+
+.light {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --surface: #FFFFFF;
+  --surface-elevated: #F1F5F9;
+  --muted: #E2E8F0;
+  --muted-foreground: #64748B;
+  --border: #E2E8F0;
+  --border-subtle: rgba(0, 0, 0, 0.07);
+
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --primary-foreground: #FFFFFF;
+  --accent: #7C3AED;
+  --accent-foreground: #FFFFFF;
+  --ring: rgba(37, 99, 235, 0.45);
+  --subtle-accent: rgba(37, 99, 235, 0.06);
+  --gradient-start: #2563EB;
+  --gradient-end: #7C3AED;
+}
+
+.dark {
+  --background: #080B12;
+  --foreground: #F4F7FB;
+  --surface: #0D1220;
+  --surface-elevated: #111827;
+  --muted: #162032;
+  --muted-foreground: #9AA8BC;
+  --border: #202B3B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --primary: #60A5FA;
+  --primary-hover: #3B82F6;
+  --primary-foreground: #FFFFFF;
+  --accent: #8B5CF6;
+  --accent-foreground: #FFFFFF;
+  --ring: rgba(96, 165, 250, 0.45);
+  --subtle-accent: rgba(96, 165, 250, 0.08);
+  --gradient-start: #3B82F6;
+  --gradient-end: #8B5CF6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Background grid pattern */
+.bg-tech-grid {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Semantic utility helpers */
+.bg-canvas {
+  background-color: var(--background);
+}
+
+.text-canvas-text {
+  color: var(--foreground);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-surface-elevated {
+  background-color: var(--surface-elevated);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+.border-theme-subtle {
+  border-color: var(--border-subtle);
+}
+
+.text-muted-theme {
+  color: var(--muted-foreground);
+}
+
+.bg-primary-theme {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.text-primary-theme {
+  color: var(--primary);
+}
+
+.border-primary-theme {
+  border-color: var(--primary);
+}
+
+.bg-subtle-accent {
+  background-color: var(--subtle-accent);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
